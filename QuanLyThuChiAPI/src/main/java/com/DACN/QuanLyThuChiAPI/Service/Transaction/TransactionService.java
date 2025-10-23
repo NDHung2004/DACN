@@ -216,6 +216,14 @@ public class TransactionService implements TransactionInterface {
         {
             return ApiResponse.builder().message("Không tìm thấy giao dịch").build();
         }
+        CardModel cardModel = transactionModel.getCardModel();
+        if(transactionModel.getType()==1) {
+        	cardModel.setBalance(cardModel.getBalance() - transactionModel.getAmount());
+        }else {
+        	cardModel.setBalance(cardModel.getBalance() + transactionModel.getAmount());
+        }
+        	
+        cardRepository.save(cardModel);
         transactionRepository.delete(transactionModel);
         return ApiResponse.builder().message("Xóa giao dịch thành công!").status(200).build();
     }

@@ -42,10 +42,15 @@ public class CategoryService implements CategoryInterface {
             return ApiResponse.builder().message("User không tồn tại!").status(200).build();
         }
         CategoryModel category = categoryRepository.findCategoryModelByNameAndType(username, categoryRequest.getName(), categoryRequest.getType());
+        String type  = "thu nhập";
+        if(categoryRequest.getType()==2) {
+        	type = "chi tiêu";
+        }
         if(category != null)
         {
-            return ApiResponse.builder().message("Đã tồn tại danh mục với thể loại chi tiêu").status(101).build();
+            return ApiResponse.builder().message("Đã tồn tại danh mục với thể loại " + type).status(101).build();
         }
+        
         CategoryModel categoryModel = CategoryModel.builder().userInfoModel(userInfoModel.get()).description(categoryRequest.getDescription())
                         .name(categoryRequest.getName())
                         .color(categoryRequest.getColor())
@@ -53,21 +58,26 @@ public class CategoryService implements CategoryInterface {
                         .created_at(CurrentDateTime.getCurrentDateTime())
                         .updated_at(CurrentDateTime.getCurrentDateTime()).build();
         categoryRepository.save(categoryModel);
-        return ApiResponse.builder().status(200).message("Tạo danh mục chi tiêu thành công!").data(categoryModel).build();
+        return ApiResponse.builder().status(200).message("Tạo danh mục "+type+" thành công!").data(categoryModel).build();
     }
 
     @Override
     public ApiResponse<Object> updateCategory(String username, CategoryRequest categoryRequest, Long idCategory)
-    {
+    {	
+    	
         CategoryModel categoryModel = categoryRepository.findCategoryModelByUserInfoModel_AccountModel_UsernameAndId(username, idCategory);
         if(categoryModel == null || categoryModel.getId() <= 0)
         {
             return ApiResponse.builder().status(101).message("Không thể cập nhật danh mục chi tiêu").data(null).build();
         }
         CategoryModel category = categoryRepository.findCategoryModelByNameAndType(username, categoryRequest.getName(), categoryRequest.getType());
-        if(category != null)
+        String type  = "thu nhập";
+        if(categoryRequest.getType()==2) {
+        	type = "chi tiêu";
+        }
+        if(category != null&& !category.getId().equals(idCategory))
         {
-            return ApiResponse.builder().message("Đã tồn tại danh mục với thể loại chi tiêu").status(101).build();
+            return ApiResponse.builder().message("Đã tồn tại danh mục với thể loại "+ type).status(101).build();
         }
         else {
             if (categoryRequest.getName() != null && !categoryRequest.getName().isEmpty()) {
@@ -85,7 +95,7 @@ public class CategoryService implements CategoryInterface {
         }
         categoryModel.setUpdated_at(CurrentDateTime.getCurrentDateTime());
         categoryRepository.save(categoryModel);
-        return ApiResponse.builder().status(200).message("Cập nhật danh mục chi tiêu thành công").data(null).build();
+        return ApiResponse.builder().status(200).message("Cập nhật danh mục "+type+" thành công").data(null).build();
     }
 
     @Override

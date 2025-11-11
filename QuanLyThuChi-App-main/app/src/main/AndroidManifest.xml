@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:usesCleartextTraffic="true">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:name=".Model.GlobalVariable"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+
+        android:supportsRtl="true"
+        android:theme="@style/Theme.QuanLyThuChi_App"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".ResetPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Goal.GoalDepositActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Statistical.StatisticalMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Goal.GoalCreateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Goal.GoalDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Goal.GoalUpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Goal.GoalIntroductionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Budget.BudgetDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Budget.BudgetCreateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Budget.BudgetIntroductionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Budget.BudgetUpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Transaction.TransactionUpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Transaction.TransactionExpenseCreateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Transaction.TransactionInformationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Transaction.TransactionExpenseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Transaction.TransactionIncomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Category.UpdateCategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Category.AddCategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Category.CategoryIntroductionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.User.UpdateProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Card.CardUpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Card.CardCreateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Transaction.TransactionIncomeCreateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CardIntroductionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StatisticalChartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SettingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".IntroductionActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

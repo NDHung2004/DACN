@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            >
+
+            <Spinner
+                android:id="@+id/edtCardName"
+                android:layout_width="80dp"
+                android:layout_weight="0.25"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/custom_spinner_stat"
+                android:hint="Thẻ"
+                android:padding="6dp"
+                android:layout_marginRight="10dp"/>
+            <EditText
+                android:id="@+id/edtCardFrom"
+                android:layout_gravity="center"
+                android:layout_width="80dp"
+                android:layout_weight="0.25"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_spinner_stat"
+                android:hint="Từ"
+                android:padding="4dp"/>
+            <EditText
+                android:id="@+id/edtCardTo"
+                android:layout_width="80dp"
+                android:layout_weight="0.25"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_spinner_stat"
+                android:hint="Đến"
+                android:padding="4dp"/>
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:text="Lọc"
+                    android:textSize="8dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/btnFilterCardStat"/>
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:text="Bỏ"
+                    android:textSize="8dp"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/red"
+                    android:id="@+id/btnUnFilterCardStat"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+        <TextView
+            android:id="@+id/tvList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Danh sách giao dịch"
+            android:paddingLeft="10dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="5dp"
+            android:gravity="center"
+            android:textSize="20dp"/>
+
+        <FrameLayout
+            android:id="@+id/fragmentCardStat"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:padding="0dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rvAllCard"
+            android:divider="@color/transparent"
+            tools:listitem="@layout/item_transaction"/>
+    </LinearLayout>
+</LinearLayout>

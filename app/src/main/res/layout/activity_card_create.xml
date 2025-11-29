@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Card.CardCreateActivity">
+
+    <LinearLayout
+        android:id="@+id/titleAndBack"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:background="@drawable/home_title_background"
+        >
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:id="@+id/cardCreationHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/back_btn_background"
+                android:foreground="?attr/selectableItemBackground"
+                android:src="@drawable/ic_back"/>
+
+            <TextView
+                android:id="@+id/cardCreationTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Tạo mới thẻ ngân hàng"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="40dp"
+                android:textSize="22sp"
+                android:textColor="#1606FB"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_margin="10dp"
+        android:layout_below="@+id/titleAndBack"
+        android:id="@+id/cardImage"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/card2"/>
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/cardImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:text="Nhập thông tin thẻ"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text"
+        android:padding="20sp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/cardNumber"
+                style="@style/custom_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/transaction_amount"
+                android:hint="Số tài khoản"
+                android:inputType="number"
+                android:padding="16dp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <EditText
+                android:id="@+id/cardBalance"
+                style="@style/custom_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/transaction_amount"
+                android:hint="Số dư hiện tại"
+                android:inputType="number"
+                android:padding="16dp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <EditText
+                android:id="@+id/cardName"
+                style="@style/custom_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/bank_name"
+                android:hint="Tên Ngân hàng"
+                android:padding="16dp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <EditText
+                android:id="@+id/cardDescription"
+                style="@style/custom_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/description"
+                android:hint="Mô tả chi tiết"
+                android:padding="16dp" />
+
+            <Button
+                android:id="@+id/cardCreate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Thêm thẻ mới" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

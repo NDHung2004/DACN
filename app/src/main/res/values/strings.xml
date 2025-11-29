@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">QuanLyThuChi_App</string>
+    <string name="card_balance" translatable="false">5 000 000 VND</string>
+    <string name="card_number" translatable="false">0312 0000 0000 7616</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="alertWarning">Cảnh báo!</string>
+    <string name="alertConfirm">Dữ liệu bạn xóa không thể khôi phục được. Bạn chắc chắn muốn xóa?</string>
+    <string name="alertTitle">Đã xảy ra sự cố!</string>
+    <string name="alertDefault">Xảy ra lỗi. Vui lòng thử lại sau!</string>
+    <string name="income">Thu nhập</string>
+    <string name="expense">Chi tiêu</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Hủy</string>
+
+</resources>

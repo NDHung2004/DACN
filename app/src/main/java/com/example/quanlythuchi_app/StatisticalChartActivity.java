@@ -43,7 +43,7 @@ public class StatisticalChartActivity extends AppCompatActivity {
             switch (position)
             {
                 case 0:
-                    tab.setText("Hàng tháng");
+                    tab.setText("Theo tháng");
                     break;
                 case 1:
                     tab.setText("Theo thẻ");

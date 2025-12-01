@@ -117,36 +117,6 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        navbar.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-
-                int itemId = item.getItemId();
-
-                if (itemId == R.id.home) {
-                    return true;
-                } else if (itemId == R.id.report) {
-                    loadingDialog.startLoadingDialog();
-                    loadingDialog.setDialogDuration(2000);
-                    startActivity(new Intent(HomeActivity.this, StatisticalChartActivity.class));
-                    overridePendingTransition(0, 0);
-                    return true;
-                } else if (itemId == R.id.card) {
-                    loadingDialog.startLoadingDialog();
-                    loadingDialog.setDialogDuration(2000);
-                    startActivity(new Intent(HomeActivity.this, CardIntroductionActivity.class));
-                    overridePendingTransition(0, 0);
-                    return true;
-                } else if (itemId == R.id.setting) {
-                    loadingDialog.startLoadingDialog();
-                    loadingDialog.setDialogDuration(2000);
-                    startActivity(new Intent(HomeActivity.this, SettingActivity.class));
-                    overridePendingTransition(0, 0);
-                    return true;
-                }
-                return false;
-            }
-        });
 
         income.setOnClickListener(new View.OnClickListener() {
             @Override

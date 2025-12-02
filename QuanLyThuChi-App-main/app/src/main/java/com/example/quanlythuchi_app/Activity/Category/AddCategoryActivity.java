@@ -44,7 +44,7 @@ public class AddCategoryActivity extends AppCompatActivity {
     String categoryTypeText, categoryNameText, categoryDesText, categoryColorText = "#00ffff";
 
     Long categoryType;
-
+// ham khoi tao
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,7 +62,7 @@ public class AddCategoryActivity extends AppCompatActivity {
         setEvent();
         createCategory();
     }
-
+// ham them danh muc
     private void createCategory() {
         addCategory.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,7 +107,7 @@ public class AddCategoryActivity extends AppCompatActivity {
             }
         });
     }
-
+// ham set loai danh muc
     private void setSpinnerTypeCategory() {
         List<String> listCategoryType = new ArrayList<>();
         listCategoryType.add("Chi tiêu");

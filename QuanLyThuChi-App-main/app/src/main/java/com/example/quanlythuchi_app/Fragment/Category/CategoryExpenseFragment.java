@@ -33,14 +33,14 @@ public class CategoryExpenseFragment extends Fragment {
     RecyclerView lvCategory;
     List<CategoryModel> mListCategory;
     SwipeRefreshLayout swipeRefreshLayout;
-
+// tao giao dien
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_category_expense, container, false);
         return view;
     }
-
+// sau khi giao dien duoc tao
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);

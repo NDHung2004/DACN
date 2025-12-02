@@ -44,27 +44,27 @@ public class CategoryService implements CategoryInterface {
         CategoryModel category = categoryRepository.findCategoryModelByNameAndType(username, categoryRequest.getName(), categoryRequest.getType());
         String type  = "thu nhập";
         if(categoryRequest.getType()==2) {
-        	type = "chi tiêu";
+            type = "chi tiêu";
         }
         if(category != null)
         {
             return ApiResponse.builder().message("Đã tồn tại danh mục với thể loại " + type).status(101).build();
         }
-        
+
         CategoryModel categoryModel = CategoryModel.builder().userInfoModel(userInfoModel.get()).description(categoryRequest.getDescription())
-                        .name(categoryRequest.getName())
-                        .color(categoryRequest.getColor())
-                        .type(categoryRequest.getType())
-                        .created_at(CurrentDateTime.getCurrentDateTime())
-                        .updated_at(CurrentDateTime.getCurrentDateTime()).build();
+                .name(categoryRequest.getName())
+                .color(categoryRequest.getColor())
+                .type(categoryRequest.getType())
+                .created_at(CurrentDateTime.getCurrentDateTime())
+                .updated_at(CurrentDateTime.getCurrentDateTime()).build();
         categoryRepository.save(categoryModel);
         return ApiResponse.builder().status(200).message("Tạo danh mục "+type+" thành công!").data(categoryModel).build();
     }
 
     @Override
     public ApiResponse<Object> updateCategory(String username, CategoryRequest categoryRequest, Long idCategory)
-    {	
-    	
+    {
+
         CategoryModel categoryModel = categoryRepository.findCategoryModelByUserInfoModel_AccountModel_UsernameAndId(username, idCategory);
         if(categoryModel == null || categoryModel.getId() <= 0)
         {
@@ -73,7 +73,7 @@ public class CategoryService implements CategoryInterface {
         CategoryModel category = categoryRepository.findCategoryModelByNameAndType(username, categoryRequest.getName(), categoryRequest.getType());
         String type  = "thu nhập";
         if(categoryRequest.getType()==2) {
-        	type = "chi tiêu";
+            type = "chi tiêu";
         }
         if(category != null&& !category.getId().equals(idCategory))
         {

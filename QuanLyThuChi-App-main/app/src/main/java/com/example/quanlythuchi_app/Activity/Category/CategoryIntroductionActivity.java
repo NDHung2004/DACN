@@ -29,7 +29,7 @@ public class CategoryIntroductionActivity extends AppCompatActivity {
     private CategoryViewAdapter categoryViewAdapter;
 
     private ImageButton btnBack, btnAdd;
-
+//
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

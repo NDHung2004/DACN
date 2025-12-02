@@ -48,7 +48,7 @@ public class UpdateCategoryActivity extends AppCompatActivity {
     String catName_update_text, catColor_update_text, catDes_update_text, catType_update_text;
 
     Long catType_update;
-
+// tao giao diện chỉnh sửa danh mục
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,7 +66,7 @@ public class UpdateCategoryActivity extends AppCompatActivity {
         setEvent();
         updateCategory();
     }
-
+//   cập nhật danh mục
     private void updateCategory() {
         btnUpdateCategory.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -118,7 +118,7 @@ public class UpdateCategoryActivity extends AppCompatActivity {
             }
         });
     }
-
+// sự kiện cho các nút bấm
     private void setEvent() {
         cat_type.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override

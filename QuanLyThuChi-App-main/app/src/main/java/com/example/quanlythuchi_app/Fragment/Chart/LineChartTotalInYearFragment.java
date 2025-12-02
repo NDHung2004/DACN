@@ -90,7 +90,6 @@ public class LineChartTotalInYearFragment extends Fragment {
                             return monthNames[monthIndex];
                         }
                     });
-                    lineData.setValueTextSize(12f);
                     xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
                     lineChartExpense.getDescription().setEnabled(false);
                     lineChartExpense.getAxisRight().setEnabled(false);
@@ -148,7 +147,6 @@ public class LineChartTotalInYearFragment extends Fragment {
                             return monthNames[monthIndex];
                         }
                     });
-                    lineData.setValueTextSize(12f);
                     xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
                     lineChartIncome.getDescription().setEnabled(false);
                     lineChartIncome.getAxisRight().setEnabled(false);

@@ -6,7 +6,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class HTTPService {
-    public static final String baseURL = "http://10.0.2.2:8080/";
+    public static final String baseURL = "http://192.168.1.202:8080/";
     private static Retrofit retrofit;
     static HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY);
     private static OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).addInterceptor(new MyInterceptor()).build();
@@ -19,5 +19,4 @@ public class HTTPService {
                 .build();
         return retrofit;
     }
-
 }

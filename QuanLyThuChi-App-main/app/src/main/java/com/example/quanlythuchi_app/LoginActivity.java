@@ -132,6 +132,17 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
+
+//        login.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                // Bỏ qua kiểm tra tài khoản, đi thẳng vào HomeActivity
+//                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+//                startActivity(intent);
+//                finish(); // Đóng LoginActivity để khi bấm Back không quay lại
+//            }
+//        });
+
     }
     private void showExitConfirmationDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);

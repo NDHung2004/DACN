@@ -133,7 +133,6 @@ public class BarChartCardFragment extends Fragment {
 
             BarData barData = new BarData(dataSetIncome, dataSetExpense);
             barChartCard.setData(barData); // set dữ liệu
-            barData.setValueTextSize(12f);
 
             // đổ dữ liệu vào nhãn x với tên các thẻ
             List<String> xAxisLabels = new ArrayList<>();

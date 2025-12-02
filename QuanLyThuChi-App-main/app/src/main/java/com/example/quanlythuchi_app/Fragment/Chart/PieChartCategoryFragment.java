@@ -17,7 +17,6 @@ import com.example.quanlythuchi_app.Container.Response.ApiResponse;
 import com.example.quanlythuchi_app.Model.CategoryModel;
 import com.example.quanlythuchi_app.R;
 import com.github.mikephil.charting.charts.PieChart;
-import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
@@ -90,26 +89,16 @@ public class PieChartCategoryFragment extends Fragment {
                     for (int i = 0; i < colorExpenseCategory.size(); i++) {
                         colors[i] = Color.parseColor(colorExpenseCategory.get(i)); // Chuyển đổi mã màu thành kiểu int
                     }
-
                     PieDataSet pieDataSet = new PieDataSet(listExpenseCategoryEntry, "");
                     pieDataSet.setColor(Color.BLUE);
                     pieDataSet.setColors(colors);
                     PieData pieData = new PieData(pieDataSet);
-                    pieData.setValueTextSize(14f);
+
                     pieChartExpenseCategory.getDescription().setEnabled(false);
                     pieChartExpenseCategory.setDrawEntryLabels(false);
                     pieChartExpenseCategory.animateY(2000);
                     pieChartExpenseCategory.setData(pieData);
-                    Legend expenseLegend = pieChartExpenseCategory.getLegend();
-                    expenseLegend.setEnabled(true);
-                    expenseLegend.setVerticalAlignment(Legend.LegendVerticalAlignment.CENTER);
-                    expenseLegend.setHorizontalAlignment(Legend.LegendHorizontalAlignment.LEFT);
-                    expenseLegend.setOrientation(Legend.LegendOrientation.VERTICAL);
-                    expenseLegend.setDrawInside(false);
-                    expenseLegend.setTextSize(14f); //  chỉnh cỡ chữ
-
                     pieChartExpenseCategory.invalidate();
-
                 }
             }
 
@@ -172,19 +161,11 @@ public class PieChartCategoryFragment extends Fragment {
                     pieDataSet.setXValuePosition(PieDataSet.ValuePosition.INSIDE_SLICE);
                     pieDataSet.setColors(colors);
                     PieData pieData = new PieData(pieDataSet);
-                    pieData.setValueTextSize(14f);
                     pieChartIncomeCategory.getDescription().setEnabled(false);
                     pieChartIncomeCategory.setDrawEntryLabels(false);
                     pieChartIncomeCategory.setDrawCenterText(true);
                     pieChartIncomeCategory.animateY(2000);
                     pieChartIncomeCategory.setData(pieData);
-                    Legend expenseLegend = pieChartIncomeCategory.getLegend();
-                    expenseLegend.setEnabled(true);
-                    expenseLegend.setVerticalAlignment(Legend.LegendVerticalAlignment.CENTER);
-                    expenseLegend.setHorizontalAlignment(Legend.LegendHorizontalAlignment.LEFT);
-                    expenseLegend.setOrientation(Legend.LegendOrientation.VERTICAL);
-                    expenseLegend.setDrawInside(false);
-                    expenseLegend.setTextSize(14f); //  chỉnh cỡ chữ
                     pieChartIncomeCategory.invalidate();
                 }
             }

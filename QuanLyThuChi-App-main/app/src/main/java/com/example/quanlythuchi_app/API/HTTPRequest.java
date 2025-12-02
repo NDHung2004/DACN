@@ -38,7 +38,7 @@ public interface HTTPRequest {
     Call<RegisterUserResponse> getProfile();
 
     @PUT("api/user/profile")
-    Call<ApiResponse<Object>> updateProfile( @Body UpdateProfileRequest updateProfileRequest);
+    Call<ApiResponse<Object>> updateProfile(@Body UpdateProfileRequest updateProfileRequest);
 
     // ============== card
     @GET("api/card/all")

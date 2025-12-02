@@ -96,7 +96,7 @@ public class UpdateCategoryActivity extends AppCompatActivity {
                                 ApiResponse apiResponse = response.body();
                                 if(apiResponse.getStatus() == 101)
                                 {
-                                    Toast.makeText(UpdateCategoryActivity.this,apiResponse.getMessage() , Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(UpdateCategoryActivity.this, "Đã tồn tại danh mục với thể loại chi tiêu!", Toast.LENGTH_SHORT).show();
                                 }
                                 else {
                                     Toast.makeText(UpdateCategoryActivity.this, "Chỉnh sửa danh mục thành công!", Toast.LENGTH_SHORT).show();
